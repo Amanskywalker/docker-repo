@@ -3,7 +3,7 @@ FROM amanskywalker/my-base-image:latest
 # adding required packages for this image
 RUN apt-get update &&\
     apt-get install -y -q &&\
-    gdebi-core \
+#   gdebi-core \
     libapparmor1 \
     libcurl4-openssl-dev \
     libssl1.0.0 \
@@ -16,7 +16,8 @@ RUN update-locale
 
 # install the latest version of Rstudio
 RUN wget http://download2.rstudio.org/rstudio-server-0.99.903-amd64.deb &&\
-    gdebi -n rstudio-server-1.0.44-amd64.deb
+    dpkg -i rstudio-server-*
+#    gdebi -n rstudio-server-1.0.44-amd64.deb
 
 # simple scripts to do the startup task
 RUN mkdir -p /etc/my_init.d
