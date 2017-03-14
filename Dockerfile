@@ -19,10 +19,6 @@ RUN mkdir -p /etc/my_init.d
 COPY startup.sh /etc/my_init.d/startup.sh
 RUN chmod +x /etc/my_init.d/startup.sh
 
-RUN mkdir -p /etc/my_init
-COPY startit.sh /etc/my_init/startit.sh
-RUN chmod +x /etc/my_init/startit.sh
-
 # adding demons
 RUN mkdir -p /etc/service/rserver &&\
     mkdir -p /var/log/corn/config &&\
