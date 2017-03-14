@@ -1,5 +1,8 @@
 FROM amanskywalker/my-base-image:latest
 
+# cleaning any dirt left by base image
+RUN apt-get clean
+
 # updated ppa's
 RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" > /etc/apt/sources.list.d/R.list &&\
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
