@@ -8,9 +8,11 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" > /etc/apt/sourc
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
 # installing Rstudio server
-RUN wget http://download2.rstudio.org/rstudio-server-0.99.903-amd64.deb &&\
-    apt-get -y install libapparmor1 apparmor-utils libssl1.0.0 &&\
+RUN apt-get update &&\
+    apt-get -y install libapparmor1 apparmor-utils libssl1.0.0 libedit2 psmisc wget sudo &&\
+    wget http://download2.rstudio.org/rstudio-server-0.99.903-amd64.deb &&\
     dpkg -i rstudio-server-* &&\
+
 
 # simple scripts to do the startup task
 RUN mkdir -p /etc/my_init.d
