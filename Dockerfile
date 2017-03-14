@@ -9,9 +9,9 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" > /etc/apt/sourc
 
 # installing Rstudio server
 RUN apt-get update &&\
-    apt-get -y install libapparmor1 apparmor-utils libssl1.0.0 libedit2 psmisc wget sudo &&\
+    apt-get -y install libapparmor1 apparmor-utils libssl1.0.0 libedit2 psmisc wget sudo gdebi-core &&\
     wget http://download2.rstudio.org/rstudio-server-0.99.903-amd64.deb &&\
-    dpkg -i rstudio-server-*
+    gdebi -n rstudio-server-0.99.903-amd64.deb
 
 
 # simple scripts to do the startup task
