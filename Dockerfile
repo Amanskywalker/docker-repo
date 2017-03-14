@@ -6,7 +6,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" > /etc/apt/sourc
 
 # adding required packages for this image
 RUN apt-get update &&\
-    apt-get install -y -q &&\
+    apt-get install -y &&\
 #   gdebi-core \
     libapparmor1 \
     libcurl4-openssl-dev \
