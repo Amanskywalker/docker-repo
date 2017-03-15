@@ -24,7 +24,7 @@ RUN update-locale
 # install the latest version of Rstudio
 RUN wget http://download2.rstudio.org/rstudio-server-0.99.903-amd64.deb &&\
 #   dpkg -i rstudio-server-*
-    gdebi -n rstudio-server-1.0.44-amd64.deb
+    gdebi -n rstudio-server-0.99.903-amd64.deb
 
 # simple scripts to do the startup task
 RUN mkdir -p /etc/my_init.d
