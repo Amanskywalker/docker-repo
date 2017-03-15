@@ -6,7 +6,7 @@ networks:
 
 services:
   postgresql:
-    image: 'postgresql:latest'
+    image: 'postgres:latest'
     networks:
       - net1
     ports:
