@@ -11,7 +11,7 @@ services:
       - net1
     ports:
       - '5432:5432'
-  rstudio:
+  rstudio-image:
     image: 'amanskywalker/rstudio-image'
     networks:
       - net1
