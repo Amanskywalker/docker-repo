@@ -1,5 +1,4 @@
-#FROM quantumobject/docker-baseimage:16.04
-FROM amanskywalker/my-base-image:latest
+FROM amanskywalker/docker-image-core:latest
 
 # updated ppa's
 RUN echo "deb http://archive.ubuntu.com/ubuntu `cat /etc/container_environment/DISTRIB_CODENAME`-backports main restricted universe" >> /etc/apt/sources.list
