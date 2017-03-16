@@ -34,7 +34,7 @@ RUN chmod +x /etc/my_init.d/startup.sh
 RUN mkdir -p /etc/service/rserver &&\
     mkdir -p /var/log/corn/config &&\
     mkdir -p /var/log/rserver ; sync
-COPY rserver.sh /etc/service/rserver/run
+COPY runserver.sh /etc/service/rserver/run
 RUN chmod +x /etc/service/rserver/run \
     && cp /var/log/cron/config /var/log/rserver/ \
     && chown -R rstudio-server /var/log/rserver
