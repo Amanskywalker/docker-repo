@@ -16,7 +16,7 @@ Both of this images are made to communicate with each other using docker bridge 
 
 ## Live instance
 
-Just of testing purpose a demo instance of Rstudio present at [67.205.166.101:8787](http://67.205.166.101:8787) which is the same image metioned Here.
+Currently No Demo instance are live now.
 
 ## How to Run this?
 
